@@ -13,26 +13,22 @@ body{
 }
 
 header{
-    padding: 64px 0 0 0;
     flex: 1;
-
-}
-
-header .container{
-
+    height: auto;
 }
 
 .content{
     flex: 2;
-    margin: 200px auto;
+    margin: 24px auto;
 }
 
 nav{
-    margin: 16px 0;
+    margin: 24px 0;
+    display: inline;
 }
 
 nav a{
-    padding: 0 16px 0 0;
+    padding: 16px 16px 0 0;
 }
 
 main{
@@ -50,8 +46,11 @@ article{
 }
 
 section{
-    margin: 16px 16px 0 0;
+    margin: 0 16px 0 0;
     text-align: left;
+}
+
+.group{
     display: flex;
     flex-direction: column;
 }
@@ -89,20 +88,22 @@ h1, h2, h3 {
 }
 
 h3{
+    font-size: 16px;
     font-weight: 500;
+    width: 100%;
+    color: #8d99ae;
 }
 
 h5{
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
+    color: #8d99ae;
 }
 
-p, h3, h5 {
-    color: #8d99ae;
+p{
     line-height: 1.4;
 }
-
 
 /* Links */
 
@@ -130,18 +131,22 @@ a:active{
     body{
         flex-direction: row;
     }
-    header{
-        height: 100vh;
-    }
     header .container{
         position: fixed;
         margin: 128px 0;
     }
-    section{
+    .content{
+        margin: 160px auto;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .group{
         flex-direction: row;
     }
     .item{
-        margin: 16px 16px 0 0;
+        margin: 0 16px 0 0;
     }
 }
 

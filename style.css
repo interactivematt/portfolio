@@ -6,10 +6,25 @@ body{
     color: #2b2d42;
     text-align: left;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header{
     padding: 64px 0 0 0;
+    flex: 1;
+
+}
+
+header .container{
+
+}
+
+.content{
+    flex: 2;
+    margin: 200px auto;
 }
 
 nav{
@@ -24,31 +39,32 @@ main{
     margin: 32px auto;
 }
 
+.container{
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
 article{
     margin: 48px auto;
 }
 
 section{
-    border-radius: 12px;
-    background: #e4ecee;
-    padding: 16px 32px;
-    margin: 12px auto;
-    text-align: center;
+    margin: 16px 16px 0 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
-section img{
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
+.item{
+    flex: 1;
+}
+
+header img{
+    width: 72px;
+    height: 72px;
+    margin: 16px auto;
     border-radius: 50%;
-}
-
-.container{
-    max-width: 640px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 16px;
-    box-sizing: border-box;
 }
 
 ol, ul{
@@ -76,7 +92,13 @@ h3{
     font-weight: 500;
 }
 
-p, h3 {
+h5{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p, h3, h5 {
     color: #8d99ae;
     line-height: 1.4;
 }
@@ -103,14 +125,27 @@ a:active{
     text-decoration: underline;
 }
 
+/* Media Queries */
+@media all and (min-width: 768px){
+    body{
+        flex-direction: row;
+    }
+    header{
+        height: 100vh;
+    }
+    header .container{
+        position: fixed;
+        margin: 128px 0;
+    }
+    section{
+        flex-direction: row;
+    }
+    .item{
+        margin: 16px 16px 0 0;
+    }
+}
+
 /* MUST INCLUDE
-    ✅ background
-    ✅ color
-    ✅ font-family
-    ✅ font-size
-    ✅ height
-    ✅ margin
-    ✅ padding
-    ✅ text-align
-    ✅ styled links using pseudo-classes
+    ✅ flexbox
+    ✅ media queries
 */

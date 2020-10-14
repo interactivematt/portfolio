@@ -10,6 +10,8 @@ body{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 header{
@@ -58,7 +60,6 @@ section{
 
 .item{
     flex: 1;
-    max-width: 640px;
 }
 
 
@@ -218,11 +219,17 @@ a:active{
         margin: 0 40px 0 0;
     }
     .item:first-child {
-        flex: 2;
+        flex: 1;
     }
     #projects .item{
         flex: 1;
         margin: 16px 40px 0 0;
+    }
+}
+
+@media all and (min-width: 1024px){
+    .item:first-child{
+        flex: 2;
     }
 }
 

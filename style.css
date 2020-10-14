@@ -42,7 +42,8 @@ main{
 }
 
 article{
-    margin: 48px auto;
+    padding: 24px 0;
+    margin: 24px auto;
 }
 
 section{
@@ -57,7 +58,11 @@ section{
 
 .item{
     flex: 1;
+    max-width: 640px;
 }
+
+
+
 
 header img{
     width: 72px;
@@ -79,6 +84,69 @@ li{
 li span{
     color: #8d99ae;
 }
+
+/* Form */
+label, input, textarea{
+    display: block;
+    width: 100%;
+    color: #2b2d42;
+}
+
+label {
+    margin: 24px 0 8px 0;
+}
+
+label span{
+    color: #ef233c;
+}
+
+input, textarea{
+    background: #e7e7eb;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+input:hover, textarea:hover{
+    box-shadow: 0px 0px 0px 1px #8d99ae inset;
+}
+
+input:focus, textarea:focus{
+    box-shadow: 0px 0px 0px 1px #8d99ae inset;
+    outline: none;
+    background: #ffffff;
+}
+
+::-webkit-input-placeholder {
+    color: #8d99ae;
+}
+
+button{
+    color: white;
+    background: #ef233c;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    margin: 8px 0;
+}
+
+button:hover{
+    background: #ec5d6e;
+    cursor: pointer;
+}
+
+button#clear{
+    background: none;
+    color: #8d99ae
+}
+
+#clear:hover{
+    background: #e7e7eb;
+    color: #2b2d42;
+}
+
+
 
 /* Typography */
 
@@ -127,16 +195,17 @@ a:active{
 }
 
 /* Media Queries */
+
 @media all and (min-width: 768px){
     body{
         flex-direction: row;
     }
     header .container{
         position: fixed;
-        margin: 128px 0;
+        margin: 96px 24px;
     }
     .content{
-        margin: 160px auto;
+        margin: 132px auto;
     }
     nav{
         display: flex;
@@ -146,7 +215,14 @@ a:active{
         flex-direction: row;
     }
     .item{
-        margin: 0 16px 0 0;
+        margin: 0 40px 0 0;
+    }
+    .item:first-child {
+        flex: 2;
+    }
+    #projects .item{
+        flex: 1;
+        margin: 16px 40px 0 0;
     }
 }
 

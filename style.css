@@ -213,7 +213,7 @@ a:active{
         flex-direction: column;
     }
     .group{
-        flex-direction: row;
+        flex-direction: column;
     }
     .item{
         margin: 0 40px 0 0;
@@ -228,6 +228,9 @@ a:active{
 }
 
 @media all and (min-width: 1024px){
+    .group{
+        flex-direction: row;
+    }
     .item:first-child{
         flex: 2;
     }
